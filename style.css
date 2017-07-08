@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+section {
+  display: inline-block;
+  float: left;
+  height:100vh;
+  width: 50%;
+}
+
+.section-left {
+  background-color: #455A64;
+
+}
+
+.section-right {
+  background-color: #CFD8DC;
+}
