@@ -21,4 +21,40 @@ section {
 
 .section-right {
   background-color: #CFD8DC;
+  /*align-items: center;*/
+  /*margin: auto;*/
+}
+
+.card {
+  border-color: #607D8B;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  text-align: left;
+  background-color: #FFF;
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+
+  /*align-items: center;*/
+}
+.card h2 {
+  color: #455A64;
+}
+.card a {
+  color: #607D8B;
+  text-decoration-color: #F2F4F4;
+}
+.card hr {
+  color: #CFD8DC;
+}
+.card button {
+  color: #455A64;
+
+  /*text-decoration: none;*/
+}
+.card a:hover {
+  color: #455A64;
+  text-decoration-color: #FFC107;
+  font-weight: 800;
 }
