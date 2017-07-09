@@ -50,6 +50,10 @@ section {
 }
 .card button {
   color: #455A64;
+  border: none;
+  background-color: transparent;
+  padding: none;
+  outline: transparent;
 
   /*text-decoration: none;*/
 }
@@ -57,4 +61,9 @@ section {
   color: #455A64;
   text-decoration-color: #FFC107;
   font-weight: 800;
+}
+.card button:hover {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
 }
