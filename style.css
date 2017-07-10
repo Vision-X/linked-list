@@ -28,7 +28,8 @@ section {
 }
 
 .card {
-  margin-top: 25px;
+  margin-top: 26px;
+  margin-bottom: 37px;
   border-color: #607D8B;
   border-style: solid;
   border-width: 2px;
@@ -41,19 +42,23 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   height: 205px;
+  position: relative;
 
   /*align-items: center;*/
 }
 .card h2 {
   color: #455A64;
-  font-size: 32px;
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .card a {
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 26px;
   color: #607D8B;
   text-decoration-color: #F2F4F4;
+  font-size: 25px;
 }
 .card hr {
   color: #CFD8DC;
@@ -63,7 +68,12 @@ section {
   border: none;
   background-color: transparent;
   padding: 0px;
+  padding-top: 9px;
   outline: transparent;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  font-size: 19px;
+  font-family: 'Open Sans', 'sans-serif';
 
   /*text-decoration: none;*/
 }
@@ -78,8 +88,6 @@ section {
   text-decoration-color: #FFC107;
 }
 .deleteButton {
-  /*position: absolute;
-  right: 0;*/
-  /*text-align: right;
-  align-items: right;*/
+  position: absolute;
+  right: 20px;
 }
