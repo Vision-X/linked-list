@@ -18,7 +18,17 @@ section {
   background-color: #455A64;
 
 }
+.card.read{
+  background-color: #F2F4F4;
 
+}
+.card.read a {
+  text-decoration-color: #CFD8DC;
+}
+.card.read button.readButton {
+  color: #F05A28;
+  font-weight: 800;
+}
 .section-right {
   background-color: #CFD8DC;
   border-style: solid;
