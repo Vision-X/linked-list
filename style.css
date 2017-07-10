@@ -135,3 +135,21 @@ enter:disabled {
   position: absolute;
   right: 20px;
 }
+.card.read{
+  background-color: #F2F4F4;
+
+}
+.card.read a {
+  text-decoration-color: #CFD8DC;
+}
+.card.read button.readButton {
+  color: #F05A28;
+  font-weight: 800;
+}
+.card.read button:hover{
+  text-decoration-color: #FFC107;
+}
+.card.read a:hover{
+  color: #FFC107;
+  text-decoration-color: #FFC107;
+}
