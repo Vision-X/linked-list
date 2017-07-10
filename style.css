@@ -52,10 +52,11 @@ section {
 }
 .card a {
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 26px;
   color: #607D8B;
   text-decoration-color: #F2F4F4;
+  font-size: 25px;
 }
 .card hr {
   color: #CFD8DC;
