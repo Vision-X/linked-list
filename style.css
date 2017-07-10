@@ -66,7 +66,12 @@ section {
   border: none;
   background-color: transparent;
   padding: 0px;
+  padding-top: 9px;
   outline: transparent;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  font-size: 19px;
+  font-family: 'Open Sans', 'sans-serif';
 
   /*text-decoration: none;*/
 }
