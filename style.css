@@ -41,6 +41,7 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   height: 205px;
+  position: relative;
 
   /*align-items: center;*/
 }
@@ -86,8 +87,6 @@ section {
   text-decoration-color: #FFC107;
 }
 .deleteButton {
-  /*position: absolute;
-  right: 0;*/
-  /*text-align: right;
-  align-items: right;*/
+  position: absolute;
+  right: 20px;
 }
