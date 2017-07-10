@@ -14,7 +14,7 @@ section {
   width: 50%;
 }
 
-.section-left {
+.input-section {
   background-color: #455A64;
   padding: 1% 5%;
 }
@@ -63,7 +63,7 @@ enter:disabled {
   border: 1px solid #CFD8DC;
 }
 
-.section-right {
+.card-section {
   background-color: #CFD8DC;
   border-style: solid;
   border-width: 1px;
@@ -137,9 +137,11 @@ enter:disabled {
 }
 .card.read{
   background-color: #F2F4F4;
-
 }
 .card.read a {
+  text-decoration-color: #CFD8DC;
+}
+.card.read button {
   text-decoration-color: #CFD8DC;
 }
 .card.read button.readButton {
@@ -148,8 +150,8 @@ enter:disabled {
 }
 .card.read button:hover{
   text-decoration-color: #FFC107;
+  color: #455A64;
 }
 .card.read a:hover{
-  color: #FFC107;
   text-decoration-color: #FFC107;
 }
