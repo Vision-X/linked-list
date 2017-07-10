@@ -16,7 +16,51 @@ section {
 
 .section-left {
   background-color: #455A64;
+  padding: 1% 5%;
+}
 
+h1 {
+  color: #FFFFFF;
+  font-size: 60px;
+  margin-top: 30%;
+  text-align: center;
+  word-spacing: 20px;
+}
+
+img {
+  max-width: 85px;
+}
+
+input {
+  border: 2px solid #CED2D2;
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  height: 32px;
+  margin-top: 55px;
+  padding: 4%;
+  width: 100%;
+}
+
+input:placeholder {
+  color: #C0C2C4;
+}
+
+#enter {
+  background-color: #FFC107;
+  border: 1px solid #FFC107;
+  color: #FFFFFF;
+  font-size: 26px;
+  height: 45px;
+  margin: 45px 0;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+enter:disabled {
+  background-color: #CFD8DC;
+  border: 1px solid #CFD8DC;
 }
 
 .section-right {
