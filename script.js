@@ -1,7 +1,11 @@
 $("#enter").on('click', function(){
   createBookmark();
-  // clearFields();
-  // disableEnter();
+})
+
+//readButton
+$('.card-section').on('click', '.readButton', function(){
+  $(this).parent().toggleClass("read");
+
 })
 
 function createBookmark(){
@@ -22,5 +26,5 @@ function createBookmark(){
   $(".inputField1").val("");
   $(".inputField2").val("");
   //disable enter button
-  $("#enter").attr("disabled", true);
+  // $("#enter").attr("disabled", true); //works, no enable function built
 }
