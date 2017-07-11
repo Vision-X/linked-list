@@ -7,8 +7,8 @@ function addArticle(userTitle, userURL){
 
   newArticle.appendChild(newH2);
   newArticle.appendChild(document.createElement('hr'));
-  newArticle.appendChild(document.createElement('hr'));
   newArticle.appendChild(newA);
+  newArticle.appendChild(document.createElement('hr'));
   newArticle.appendChild(newReadButton);
   newArticle.appendChild(newDeleteButton);
 
@@ -16,12 +16,13 @@ function addArticle(userTitle, userURL){
   newH2.innerHTML = userTitle;
   newA.innerHTML = userURL;
   newA.href = userURL;
+  newA.target = "blank";
   newReadButton.innerHTML = "Read";
   newReadButton.classList.add("readButton");
   newDeleteButton.innerHTML = "Delete";
   newDeleteButton.classList.add("deleteButton");
 
   var currentArticle = document.getElementById('card1');
-  var sectionRight = document.querySelector('.section-right');
+  var sectionRight = document.querySelector('.card-section');
   sectionRight.insertBefore(newArticle, currentArticle);
 }
