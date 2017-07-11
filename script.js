@@ -7,8 +7,8 @@ function addArticle(userTitle, userURL){
 
   newArticle.appendChild(newH2);
   newArticle.appendChild(document.createElement('hr'));
-  newArticle.appendChild(newA);
   newArticle.appendChild(document.createElement('hr'));
+  newArticle.appendChild(newA);
   newArticle.appendChild(newReadButton);
   newArticle.appendChild(newDeleteButton);
 
