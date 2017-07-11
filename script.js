@@ -1,11 +1,21 @@
 $("#enter").on('click', function(){
   createBookmark();
-  // clearFields();
-  // disableEnter();
+})
+
+//readButton
+$('.card-section').on('click', '.readButton', function(){
+  $(this).parent().toggleClass("read");
+})
+//deleteButton
+$('.card-section').on('click', '.deleteButton', function(){
+  // $(this).parent().toggle(".read");
+  // $(this).parent().remove();
+  $(this).parent().slideToggle("slow", function(){
+    $(this).remove()
+  });
 })
 
 function createBookmark(){
-  console.log('createBookmark running');
   var title = $(".inputField1").val();
   var url = $(".inputField2").val();
   var placeholder = `
@@ -18,6 +28,10 @@ function createBookmark(){
     <button type="button" class="deleteButton">Delete</button>
   </article>
   `
-  console.log(placeholder);
   $(".card-section").prepend(placeholder);
+  //clear fields
+  $(".inputField1").val("");
+  $(".inputField2").val("");
+  //disable enter button
+  // $("#enter").attr("disabled", true); //works, no enable function built
 }
