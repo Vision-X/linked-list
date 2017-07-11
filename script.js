@@ -5,7 +5,14 @@ $("#enter").on('click', function(){
 //readButton
 $('.card-section').on('click', '.readButton', function(){
   $(this).parent().toggleClass("read");
-
+})
+//deleteButton
+$('.card-section').on('click', '.deleteButton', function(){
+  // $(this).parent().toggle(".read");
+  // $(this).parent().remove();
+  $(this).parent().slideToggle("slow", function(){
+    $(this).remove()
+  });
 })
 
 function createBookmark(){
