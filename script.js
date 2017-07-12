@@ -1,27 +1,29 @@
 //on page load
 checkForInput();
 
-$("#enter").on('click', function(){
+$("#enter").on('click', function() {
   createBookmark();
 })
 
 //readButton
-$('.card-section').on('click', '.readButton', function(){
+$('.card-section').on('click', '.readButton', function() {
   $(this).parent().toggleClass("read");
+  updateReadCounters();
 })
 //deleteButton
-$('.card-section').on('click', '.deleteButton', function(){
+$('.card-section').on('click', '.deleteButton', function() {
   // $(this).parent().toggle(".read");
   // $(this).parent().remove();
-  $(this).parent().slideToggle("slow", function(){
+  $(this).parent().slideToggle("slow", function() {
     $(this).remove();
     updateTotalCounter();
+    updateReadCounters();
   });
 })
 
 $(".inputField1, .inputField2").on('input', checkForInput);
 
-function createBookmark(){
+function createBookmark() {
   var title = $(".inputField1").val();
   var url = $(".inputField2").val();
   var placeholder = `
@@ -41,9 +43,10 @@ function createBookmark(){
   //disable enter button
   $("#enter").attr("disabled", true); //works, no enable function built
   updateTotalCounter();
+  updateReadCounters();
 }
 
-function checkForInput(){
+function checkForInput() {
   var title = $(".inputField1").val();
   var url = $(".inputField2").val();
   if (title === "" || url === ""){
@@ -53,7 +56,15 @@ function checkForInput(){
     $("#enter").attr("disabled", false);
   }
 }
-function updateTotalCounter(){
+function updateTotalCounter() {
   var currentCardCount = $('.card').length;
-  $('#total-display').text(currentCardCount)
+  $('#total-display').text(currentCardCount);
+}
+function updateReadCounters() {
+  var currentReadCount = $('.card.read').length;
+  $('#read-display').text(currentReadCount);
+  var currentUnreadCount = $('.card').length - $('.card.read').length;
+  $('#unread-display').text(currentUnreadCount);
+}
+function updateUnreadCounter() {
 }
