@@ -46,7 +46,7 @@ input:placeholder {
   color: #C0C2C4;
 }
 
-#enter {
+#enter, #clear-read{
   background-color: #FFC107;
   border: 1px solid #FFC107;
   color: #FFFFFF;
