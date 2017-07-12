@@ -58,15 +58,20 @@ input:placeholder {
   width: 100%;
 }
 
-enter:disabled {
+#enter:disabled {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
+  font-style: italic;
 }
 
 .card-section {
   background-color: #CFD8DC;
   border-style: solid;
   border-width: 1px;
+  overflow: scroll;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 50%;
   /*align-items: center;*/
   /*margin: auto;*/
 }
@@ -81,12 +86,17 @@ enter:disabled {
   text-align: left;
   background-color: #FFF;
   width: 90%;
+  /*width: 250px;*/
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   height: 205px;
   position: relative;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   /*align-items: center;*/
 }
@@ -95,6 +105,10 @@ enter:disabled {
   font-size: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .card a {
   display: inline-block;

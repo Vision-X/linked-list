@@ -44,7 +44,7 @@ function createBookmark(){
 function checkForInput(){
   var title = $(".inputField1").val();
   var url = $(".inputField2").val();
-  if (title === "" && url === ""){
+  if (title === "" || url === ""){
     $("#enter").attr("disabled", true);
   }
   else {
