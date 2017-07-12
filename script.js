@@ -1,5 +1,8 @@
+//on page load
+checkForInput();
+
 $("#enter").on('click', function(){
-  checkForError();
+  createBookmark();
 })
 
 //readButton
@@ -14,6 +17,8 @@ $('.card-section').on('click', '.deleteButton', function(){
     $(this).remove();
   });
 })
+
+$(".inputField1, .inputField2").on('input', checkForInput);
 
 function createBookmark(){
   var title = $(".inputField1").val();
@@ -33,16 +38,16 @@ function createBookmark(){
   $(".inputField1").val("");
   $(".inputField2").val("");
   //disable enter button
-  // $("#enter").attr("disabled", true); //works, no enable function built
+  $("#enter").attr("disabled", true); //works, no enable function built
 }
 
-function checkForError(){
+function checkForInput(){
   var title = $(".inputField1").val();
   var url = $(".inputField2").val();
-  if (title === "" || url === ""){
-    alert("A Title and URL are required to submit")
+  if (title === "" && url === ""){
+    $("#enter").attr("disabled", true);
   }
   else {
-    createBookmark();
+    $("#enter").attr("disabled", false);
   }
 }
