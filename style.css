@@ -46,7 +46,7 @@ input:placeholder {
   color: #C0C2C4;
 }
 
-#enter, #clear-read{
+.input-button {
   background-color: #FFC107;
   border: 1px solid #FFC107;
   color: #FFFFFF;
@@ -58,6 +58,7 @@ input:placeholder {
   width: 100%;
 }
 
+
 #enter:disabled {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
@@ -66,9 +67,9 @@ input:placeholder {
 
 .card-section {
   background-color: #CFD8DC;
-  border-style: solid;
-  border-width: 1px;
-  overflow: scroll;
+  /*border-style: solid;
+  border-width: 1px;*/
+  overflow-y: auto;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 50%;
@@ -135,6 +136,10 @@ input:placeholder {
 
   /*text-decoration: none;*/
 }
+/*p, #clear-read {
+  display: none;
+}*/
+
 .card a:hover {
   color: #455A64;
   text-decoration-color: #FFC107;

@@ -15,6 +15,7 @@ $('.card-section').on('click', '.deleteButton', function(){
   // $(this).parent().remove();
   $(this).parent().slideToggle("slow", function(){
     $(this).remove();
+    updateTotalCounter();
   });
 })
 
@@ -39,6 +40,7 @@ function createBookmark(){
   $(".inputField2").val("");
   //disable enter button
   $("#enter").attr("disabled", true); //works, no enable function built
+  updateTotalCounter();
 }
 
 function checkForInput(){
@@ -50,4 +52,8 @@ function checkForInput(){
   else {
     $("#enter").attr("disabled", false);
   }
+}
+function updateTotalCounter(){
+  var currentCardCount = $('.card').length;
+  $('#total-display').text(currentCardCount)
 }
