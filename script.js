@@ -1,5 +1,6 @@
 //on page load
 checkForInput();
+toggleReadButton();
 
 //listeners
 $("#enter-btn").on('click', function() {
@@ -9,14 +10,7 @@ $("#enter-btn").on('click', function() {
 $('.card-section').on('click', '.readbtn', function() {
   $(this).parent().toggleClass("read");
   updateReadCounters();
-  if($('.read').length === 0){
-    console.log('should disable');
-    $("#clear-read-btn").attr('disabled', true);
-  }
-  else{
-    console.log('should enable');
-    $("#clear-read-btn").attr('disabled', false);
-  }
+  toggleReadButton();
 })
 
 $('.card-section').on('click', '.deletebtn', function() {
@@ -87,4 +81,14 @@ function updateReadCounters() {
   $('#read-display').text(currentReadCount);
   var currentUnreadCount = $('.card').length - $('.card.read').length;
   $('#unread-display').text(currentUnreadCount);
+}
+function toggleReadButton(){
+  if($('.read').length === 0){
+    console.log('should disable');
+    $("#clear-read-btn").attr('disabled', true);
+  }
+  else{
+    console.log('should enable');
+    $("#clear-read-btn").attr('disabled', false);
+  }
 }
