@@ -6,12 +6,12 @@ $("#enter-btn").on('click', function() {
   createBookmark();
 })
 
-$('.card-section').on('click', '.readButton', function() {
+$('.card-section').on('click', '.readbtn', function() {
   $(this).parent().toggleClass("read");
   updateReadCounters();
 })
 
-$('.card-section').on('click', '.deleteButton', function() {
+$('.card-section').on('click', '.deletebtn', function() {
   $(this).parent().slideToggle("slow", function() {
     $(this).remove();
     updateTotalCounter();
@@ -20,6 +20,14 @@ $('.card-section').on('click', '.deleteButton', function() {
 })
 
 $(".input-field-1, .input-field-2").on('input', checkForInput);
+
+$("#clear-read-btn").on('click', function(){
+  $(".card.read").slideToggle("slow", function(){
+    $(this).remove();
+    updateTotalCounter();
+    updateReadCounters();
+  })
+})
 
 //functions
 function createBookmark() {
@@ -31,8 +39,8 @@ function createBookmark() {
     <hr>
     <a target = _blank href="${url}">${url}</a>
     <hr>
-    <button type="button" class="readButton">Read</button>
-    <button type="button" class="deleteButton">Delete</button>
+    <button type="button" class="readbtn">Read</button>
+    <button type="button" class="deletebtn">Delete</button>
   </article>
   `;
   $(".card-section").prepend(placeholder);
@@ -41,6 +49,7 @@ function createBookmark() {
   $("#enter-btn").attr("disabled", true);
   updateTotalCounter();
   updateReadCounters();
+  $("p, #clear-read-btn").slideDown("slow");
 }
 
 function checkForInput() {
