@@ -34,7 +34,7 @@ h1 {
 }
 
 img {
-  max-width: 85px;
+  max-width: 95px;
 }
 
 input {
@@ -199,10 +199,10 @@ p,
     font-size: 64px;
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1080px) {
 
   h1 {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   img {
