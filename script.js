@@ -21,6 +21,14 @@ $('.card-section').on('click', '.deleteButton', function() {
 
 $(".input-field-1, .input-field-2").on('input', checkForInput);
 
+$("#clear-read-btn").on('click', function(){
+  $(".card.read").slideToggle("slow", function(){
+    $(this).remove();
+    updateTotalCounter();
+    updateReadCounters();
+  })
+})
+
 //functions
 function createBookmark() {
   var title = $(".input-field-1").val();
