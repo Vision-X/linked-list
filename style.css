@@ -15,8 +15,9 @@ section {
 }
 
 p {
-  text-align: center;
   color: #FFF;
+  margin-top: 10%;
+  text-align: center;
 }
 
 .input-section {
@@ -26,8 +27,8 @@ p {
 
 h1 {
   color: #FFFFFF;
-  font-size: 60px;
-  margin-top: 30%;
+  font-size: 86px;
+  margin-top: 20%;
   text-align: center;
   word-spacing: 20px;
 }
@@ -39,17 +40,19 @@ img {
 input {
   border: 2px solid #CED2D2;
   display: block;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
+  height: 32px;
   line-height: 1.20;
   margin-top: 10%;
-  padding: 5px;
+  padding: 20px 10px;
   width: 100%;
 }
 
 input::placeholder {
   color: #C0C2C4;
   font-family: "Open Sans", "sans-serif";
+  letter-spacing: 1.2px;
 }
 
 .input-btn {
@@ -59,13 +62,13 @@ input::placeholder {
   font-size: 20px;
   font-weight: 800;
   height: 45px;
-  margin: 45px 0;
   padding: 5px;
   text-align: center;
   width: 100%;
 }
 
-#enter-btn:disabled {
+#enter-btn:disabled,
+#clear-read-btn {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
   font-style: italic;
@@ -139,7 +142,8 @@ input::placeholder {
   text-decoration-color: #F2F4F4;
 }
 
-p, #clear-read-btn {
+p,
+#clear-read-btn {
   display: none;
 }
 
