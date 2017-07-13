@@ -42,11 +42,12 @@ input {
   width: 100%;
 }
 
-input:placeholder {
+input:placeholder { /* this doesn't work */
   color: #C0C2C4;
+  font-family: "Open Sans", "sans-serif";
 }
 
-#enter {
+.input-button {
   background-color: #FFC107;
   border: 1px solid #FFC107;
   color: #FFFFFF;
@@ -58,100 +59,123 @@ input:placeholder {
   width: 100%;
 }
 
-enter:disabled {
+#enter-btn:disabled {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
+  font-style: italic;
 }
 
 .card-section {
   background-color: #CFD8DC;
+  border-color: #455A64;
   border-style: solid;
   border-width: 1px;
-  /*align-items: center;*/
-  /*margin: auto;*/
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 50%;
 }
 
 .card {
   margin-top: 26px;
   margin-bottom: 37px;
+  background-color: #FFF;
   border-color: #607D8B;
   border-style: solid;
   border-width: 2px;
   display: block;
-  text-align: left;
-  background-color: #FFF;
-  width: 90%;
+  height: 205px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   padding-left: 20px;
   padding-right: 20px;
-  height: 205px;
   position: relative;
-
-  /*align-items: center;*/
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
 }
+
 .card h2 {
   color: #455A64;
   font-size: 35px;
-  padding-top: 10px;
+  overflow: hidden;
   padding-bottom: 10px;
+  padding-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .card a {
-  display: inline-block;
-  padding-top: 25px;
-  padding-bottom: 26px;
   color: #607D8B;
-  text-decoration-color: #F2F4F4;
+  display: inline-block;
   font-size: 25px;
+  padding-bottom: 26px;
+  padding-top: 25px;
+  text-decoration-color: #F2F4F4;
 }
+
 .card hr {
   color: #CFD8DC;
 }
+
 .card button {
-  color: #455A64;
-  border: none;
   background-color: transparent;
+  border: none;
+  color: #455A64;
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 19px;
+  outline: transparent;
   padding: 0px;
   padding-top: 9px;
-  outline: transparent;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
-  font-size: 19px;
-  font-family: 'Open Sans', 'sans-serif';
-
-  /*text-decoration: none;*/
 }
+
+/*p, #clear-read {
+  display: none;
+}*/
+
 .card a:hover {
   color: #455A64;
-  text-decoration-color: #FFC107;
   font-weight: 800;
+  text-decoration-color: #FFC107;
 }
+
 .card button:hover {
   font-weight: 800;
   text-decoration: underline;
   text-decoration-color: #FFC107;
 }
+
 .deleteButton {
   position: absolute;
   right: 20px;
 }
+
 .card.read{
   background-color: #F2F4F4;
 }
+
 .card.read a {
   text-decoration-color: #CFD8DC;
 }
+
 .card.read button {
   text-decoration-color: #CFD8DC;
 }
+
 .card.read button.readButton {
   color: #F05A28;
   font-weight: 800;
 }
+
 .card.read button:hover{
-  text-decoration-color: #FFC107;
   color: #455A64;
+  text-decoration-color: #FFC107;
 }
+
 .card.read a:hover{
   text-decoration-color: #FFC107;
 }

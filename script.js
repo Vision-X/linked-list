@@ -1,28 +1,30 @@
 //on page load
 checkForInput();
 
-$("#enter").on('click', function(){
+//listeners
+$("#enter-btn").on('click', function() {
   createBookmark();
 })
 
-//readButton
-$('.card-section').on('click', '.readButton', function(){
+$('.card-section').on('click', '.readButton', function() {
   $(this).parent().toggleClass("read");
+  updateReadCounters();
 })
-//deleteButton
-$('.card-section').on('click', '.deleteButton', function(){
-  // $(this).parent().toggle(".read");
-  // $(this).parent().remove();
-  $(this).parent().slideToggle("slow", function(){
+
+$('.card-section').on('click', '.deleteButton', function() {
+  $(this).parent().slideToggle("slow", function() {
     $(this).remove();
+    updateTotalCounter();
+    updateReadCounters();
   });
 })
 
-$(".inputField1, .inputField2").on('input', checkForInput);
+$(".input-field-1, .input-field-2").on('input', checkForInput);
 
-function createBookmark(){
-  var title = $(".inputField1").val();
-  var url = $(".inputField2").val();
+//functions
+function createBookmark() {
+  var title = $(".input-field-1").val();
+  var url = $(".input-field-2").val();
   var placeholder = `
   <article class="card">
     <h2>${title}</h2>
@@ -34,20 +36,32 @@ function createBookmark(){
   </article>
   `;
   $(".card-section").prepend(placeholder);
-  //clear fields
-  $(".inputField1").val("");
-  $(".inputField2").val("");
-  //disable enter button
-  $("#enter").attr("disabled", true); //works, no enable function built
+  $(".input-field-1").val("");
+  $(".input-field-2").val("");
+  $("#enter-btn").attr("disabled", true);
+  updateTotalCounter();
+  updateReadCounters();
 }
 
-function checkForInput(){
-  var title = $(".inputField1").val();
-  var url = $(".inputField2").val();
-  if (title === "" && url === ""){
-    $("#enter").attr("disabled", true);
+function checkForInput() {
+  var title = $(".input-field-1").val();
+  var url = $(".input-field-2").val();
+  if (title === "" || url === ""){
+    $("#enter-btn").attr("disabled", true);
   }
   else {
-    $("#enter").attr("disabled", false);
+    $("#enter-btn").attr("disabled", false);
   }
+}
+
+function updateTotalCounter() {
+  var currentCardCount = $('.card').length;
+  $('#total-display').text(currentCardCount);
+}
+
+function updateReadCounters() {
+  var currentReadCount = $('.card.read').length;
+  $('#read-display').text(currentReadCount);
+  var currentUnreadCount = $('.card').length - $('.card.read').length;
+  $('#unread-display').text(currentUnreadCount);
 }
