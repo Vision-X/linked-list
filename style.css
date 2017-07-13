@@ -68,7 +68,7 @@ input::placeholder {
 }
 
 #enter-btn:disabled,
-#clear-read-btn {
+#clear-read-btn:disabled {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
   font-style: italic;
@@ -188,4 +188,116 @@ p,
 
 .card.read a:hover{
   text-decoration-color: #FFC107;
+}
+
+
+/*////// MEDIA QUERIES SECTION //////*/
+
+@media screen and (max-width: 1380px) {
+
+  h1 {
+    font-size: 64px;
+}
+
+@media screen and (max-width: 1075px) {
+
+  h1 {
+    font-size: 44px;
+  }
+
+  img {
+    max-width: 65px;
+  }
+}
+
+@media screen and (max-width: 870) {
+
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 55px;
+  }
+
+  input {
+    border: 1px solid #CED2D2;
+    margin: 5% auto;
+    font-size: 25px;
+  }
+
+  #enter-btn,
+  #clear-read-btn {
+    font-size: 20px;
+  }
+
+  article {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 30px;
+    margin-top: 10%;
+  }
+
+  img {
+    max-width: 40px;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .card h2 {
+    font-size: 28px
+  }
+
+  .card a {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .input-section {
+    float: none;
+    height: 390px;
+    padding: 5%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  input {
+    line-height: 1;
+    margin-top: 4%;
+  }
+
+  img {
+    max-width: 40px;
+  }
+
+  p {
+    margin-top: 4%;
+  }
+
+  .card-section {
+    border: none;
+    width: 100%;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card a {
+    font-size: 20px;
+  }
 }
