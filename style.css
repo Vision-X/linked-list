@@ -64,7 +64,7 @@ input::placeholder {
   width: 100%;
 }
 
-#enter-btn:disabled {
+#enter-btn:disabled, #clear-read-btn {
   background-color: #CFD8DC;
   border: 1px solid #CFD8DC;
   font-style: italic;
